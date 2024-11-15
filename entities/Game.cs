@@ -23,5 +23,12 @@ namespace AffaManagementSoftware.entities
             this.score2 = score2;
             this.dateTime = dateTime;
         }
+
+        public Game(int id, int score1, int score2)
+        {
+            this.id = id;
+            this.score1 = score1;
+            this.score2 = score2;
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgw_games = new System.Windows.Forms.DataGridView();
             this.tb_score2 = new System.Windows.Forms.TextBox();
             this.tb_score1 = new System.Windows.Forms.TextBox();
             this.cb_club1 = new System.Windows.Forms.ComboBox();
@@ -36,17 +36,18 @@
             this.date_time = new System.Windows.Forms.DateTimePicker();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_games)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgw_games
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 124);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 293);
-            this.dataGridView1.TabIndex = 0;
+            this.dgw_games.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgw_games.Location = new System.Drawing.Point(45, 124);
+            this.dgw_games.Name = "dgw_games";
+            this.dgw_games.RowTemplate.Height = 23;
+            this.dgw_games.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgw_games.Size = new System.Drawing.Size(708, 293);
+            this.dgw_games.TabIndex = 0;
             // 
             // tb_score2
             // 
@@ -92,7 +93,7 @@
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(88, 23);
             this.btn_add.TabIndex = 6;
-            this.btn_add.Text = "Oyun əlavə et";
+            this.btn_add.Text = "Yadda saxla";
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
@@ -105,6 +106,7 @@
             this.btn_edit.TabIndex = 7;
             this.btn_edit.Text = "Nəticə Daxil et";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // GamesPage
             // 
@@ -118,11 +120,11 @@
             this.Controls.Add(this.cb_club1);
             this.Controls.Add(this.tb_score1);
             this.Controls.Add(this.tb_score2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgw_games);
             this.Name = "GamesPage";
             this.Text = "GamesPage";
             this.Load += new System.EventHandler(this.GamesPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_games)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,7 +132,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgw_games;
         private System.Windows.Forms.TextBox tb_score2;
         private System.Windows.Forms.TextBox tb_score1;
         private System.Windows.Forms.ComboBox cb_club1;

@@ -22,11 +22,11 @@ namespace AffaManagementSoftware.business
         public DataTable GetAll()
         {
             return dbHelper.ExecuteReader("SELECT " +
-                "g.Id, " +
-                "c1 AS club1, " +
-                "c2 AS club2, " +
+                "g.id, " + 
+                "c1.name AS club1, " +
                 "g.Score1, " +
                 "g.Score2, " +
+                "c2.name AS club2, " +
                 "g.DateTime " +
                 "FROM  " +
                 "games g " +
@@ -53,6 +53,20 @@ namespace AffaManagementSoftware.business
 
             dbHelper.ExecuteNonQuery(query, parameters);
 
+        }
+
+        public void Update(Game game)
+        {
+            string query = @"UPDATE games SET score1=@score1, score2=@score2 WHERE id=@id";
+
+            var parameters = new Dictionary<string, object>
+            {
+                { "@score1", game.score1 },
+                { "@score2", game.score2 },
+                { "@id", game.id }
+            };
+
+            dbHelper.ExecuteNonQuery(query, parameters);
         }
     }
 }

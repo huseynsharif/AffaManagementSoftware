@@ -22,6 +22,7 @@ namespace AffaManagementSoftware.business
 
         public DataTable GetAll()
         {
+
             return dbHelper.ExecuteReader("SELECT id, name FROM clubs");
         }
 
@@ -37,6 +38,5 @@ namespace AffaManagementSoftware.business
 
             dbHelper.ExecuteNonQuery(query, parameters);
         }
-
     }
 }

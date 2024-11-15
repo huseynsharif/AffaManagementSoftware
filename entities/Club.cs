@@ -15,5 +15,10 @@ namespace AffaManagementSoftware.entities
         {
             this.name = name;
         }
+
+        public Club(int id)
+        {
+            this.id = id;
+        }
     }
 }
